@@ -31,7 +31,7 @@ img {
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
-  --body-color: hsl(0 0% 98%);
+  --body-color: rgba(241, 232, 232, 0.568);
 
   /* fonts */
   --title-font-size: 1.875rem;
@@ -73,6 +73,14 @@ body {
 
 .button:hover {
   background: var(--base-color-alt);
+  animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+  0%{
+    box-shadow: 0 0 25px var(--base-color-alt),
+    0 0 50px var(--base-color-second);
+  }
 }
 
 .divider-1 {
@@ -308,7 +316,7 @@ nav.show div.icon-close {
 
 /*====  ABOUT ============================ */
 #about {
-  background: white;
+  background: var(--body-color)
 }
 
 #about .container {
@@ -345,6 +353,10 @@ nav.show div.icon-close {
 }
 
 /*====  SERVICES ============================ */
+#services {
+  background-color: var(--body-color);
+}
+
 .cards.grid {
   gap: 1.5rem;
 }
@@ -364,14 +376,14 @@ nav.show div.icon-close {
   color: var(--base-color);
 }
 
-.card .title {
+.card title {
   font-size: 0.1rem;
   margin-bottom: 0.75rem;
 }
 
 /*====  TESTIMONIALS ============================ */
 #testimonials {
-  background: white;
+  background: var(--body-color);
 }
 
 #testimonials .container {
@@ -402,6 +414,10 @@ nav.show div.icon-close {
 }
 
 /*====  CONTACT ============================ */
+#contact {
+  background-color: var(--body-color);
+}
+
 #contact .grid {
   gap: 4rem;
 }
