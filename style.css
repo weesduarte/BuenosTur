@@ -632,6 +632,21 @@ footer .social a:hover {
     padding-right: 3rem;
   }
 
+  /* time */
+#title .title h2 {
+  font-size: 9rem;
+}
+
+  #time .subtitle {
+    font-size: 2.5rem;
+    padding-left: 16rem;
+  }
+
+  #time .list_itens {
+    font-size: 1.4rem;
+    padding-left: 18rem;
+  }
+
   /* testimonials */
   #testimonials .container {
     margin-left: auto;
