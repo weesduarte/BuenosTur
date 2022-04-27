@@ -141,7 +141,7 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: var(--body-color);
+  background-color: white;
   width: 100%;
 }
 
@@ -156,11 +156,11 @@ body {
 }
 
 .logo span {
-  color: var(--base-color);
+  color: red;
 }
 
 .logo-alt span {
-  color: var(--body-color);
+  color: white;
 }
 
 /*====  NAVIGATION ============================ */
@@ -220,7 +220,7 @@ nav.show .menu {
   opacity: 1;
   visibility: visible;
 
-  background: var(--body-color);
+  background: white;
 
   height: 100vh;
   width: 100vw;
@@ -379,6 +379,37 @@ nav.show div.icon-close {
 .card title {
   font-size: 0.1rem;
   margin-bottom: 0.75rem;
+}
+
+/*============ VEHICLES ============ */
+#vehicles .title {
+  text-align: center;
+}
+
+/*============ TIME ============ */
+#time .title {
+  font: 700 var(--title-font-size) var(--title-font);
+  text-align: center;
+}
+
+#time .subtitle {
+  font-size: 1.4rem;
+  padding-left: 4rem;
+}
+
+#time .list {
+  font-size: 1.1rem;
+
+  display: inline-table;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 1.2rem;
+  padding-top: .7rem;
+}
+
+#time .list_itens {
+  padding-left: 4.7rem;
 }
 
 /*====  TESTIMONIALS ============================ */
