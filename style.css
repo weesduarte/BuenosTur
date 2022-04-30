@@ -238,7 +238,7 @@ nav.show .menu ul {
 }
 
 nav.show ul.grid {
-  gap: 4rem;
+  gap: 3rem;
 }
 
 /* toggle menu */
@@ -300,18 +300,8 @@ nav.show div.icon-close {
   border-radius: 0.25rem;
 }
 
-#home .text {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  text-align: center;
-}
-
 #home .text h1 {
   margin-bottom: 1rem;
-}
-
-#home .text p {
-  margin-bottom: 2rem;
 }
 
 /*====  ABOUT ============================ */
@@ -333,8 +323,8 @@ nav.show div.icon-close {
   width: 100%;
   background: var(--base-color-second);
   position: absolute;
-  top: -8.3%;
-  left: -33%;
+  top: -9%;
+  left: -15%;
   z-index: 0;
 }
 
@@ -381,35 +371,24 @@ nav.show div.icon-close {
   margin-bottom: 0.75rem;
 }
 
-/*============ VEHICLES ============ */
-#vehicles .title {
-  text-align: center;
+/*============ VEHICLES =====   */
+#vehicles img {
+  padding: 2rem;
 }
 
+#vehicles .button {
+  margin-top: .7rem;
+  height: 2.5rem;
+  padding: 0 3rem;
+  border-radius: .9rem;
+}
 /*============ TIME ============ */
 #time .title {
   font: 700 var(--title-font-size) var(--title-font);
-  text-align: center;
 }
 
-#time .subtitle {
+#time .subtitle_div {
   font-size: 1.4rem;
-  padding-left: 4rem;
-}
-
-#time .list {
-  font-size: 1.1rem;
-
-  display: inline-table;
-  align-items: center;
-  justify-content: space-between;
-
-  padding-left: 1.2rem;
-  padding-top: .7rem;
-}
-
-#time .list_itens {
-  padding-left: 4.7rem;
 }
 
 /*====  TESTIMONIALS ============================ */
@@ -632,21 +611,28 @@ footer .social a:hover {
     padding-right: 3rem;
   }
 
+/* vehicles */
+#vehicles .cards {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#vehicles .card {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
   /* time */
 #title .title h2 {
   font-size: 9rem;
 }
 
-  #time .subtitle {
+  #time .subtitle_div {
     font-size: 2.5rem;
-    padding-left: 16rem;
   }
 
-  #time .list_itens {
+  #time .horarios {
     font-size: 1.4rem;
-    padding-left: 18rem;
   }
-
   /* testimonials */
   #testimonials .container {
     margin-left: auto;
