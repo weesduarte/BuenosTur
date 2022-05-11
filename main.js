@@ -42,6 +42,18 @@ const swiper = new Swiper('.swiper-container', {
   keyboard: true
 })
 
+const swiperVeic = new Swiper('.swiper', {
+  autoheight: true,
+  speed: 400,
+  spaceBetween: 100,
+  slidesPerView: 1,
+  centeredSlides: true,
+  autoplay: { delay: 1850, disableonInteraction: false },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: { nextEl: '.swiper-button-sext', prevEl: 'swiper-button-prev' },
+  mousewheel: true,
+});
+
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
 const scrollReveal = ScrollReveal({
   origin: 'top',
@@ -54,7 +66,9 @@ scrollReveal.reveal(
   `#home .image, #home .text,
   #about .image, #about .text,
   #services header, #services .card,
-  #testimonials header, #testimonials .testimonials
+  #testimonials header, #testimonials .testimonials,
+  #vehicles .header, #vehicles .card,
+  #time .title, #times .horarios,
   #contact .text, #contact .links,
   footer .brand, footer .social
   `,
@@ -103,3 +117,25 @@ window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
+
+/*    modal    */
+
+const switchModal = () => {
+  const modal = document.querySelector('.modal')
+  const actualStyle = modal.style.display
+  if (actualStyle == 'block') {
+    modal.style.display = 'none'
+  } else {
+    modal.style.display = 'block'
+  }
+}
+
+const btn = document.querySelector('.modalBtn')
+btn.addEventListener('click', switchModal)
+
+window.onclick = function(event) {
+  const modal = document.querySelector('.modal')
+  if (event.target == modal) {
+    switchModal()
+  }
+}

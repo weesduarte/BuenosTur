@@ -372,16 +372,49 @@ nav.show div.icon-close {
 }
 
 /*============ VEHICLES =====   */
-#vehicles img {
-  padding: 2rem;
-}
-
 #vehicles .button {
   margin-top: .7rem;
   height: 2.5rem;
   padding: 0 3rem;
   border-radius: .9rem;
 }
+
+#vehicles img {
+  padding: 1.5rem;
+}
+
+#vehicles .vehicles {
+  text-align: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal .content {
+  margin: 15% auto;
+  padding: 1.25rem;
+  border-radius: 0.31rem;
+  width: 70%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#vehicles .content img {
+  padding: .2rem;
+  margin-top: 1.3rem;
+}
+
 /*============ TIME ============ */
 #time .title {
   font: 700 var(--title-font-size) var(--title-font);
@@ -422,7 +455,6 @@ nav.show div.icon-close {
 .swiper-pagination-bullet-active {
   background: var(--base-color);
 }
-
 /*====  CONTACT ============================ */
 #contact {
   background-color: var(--body-color);
@@ -520,7 +552,6 @@ footer .social a:hover {
   opacity: 1;
   transform: translateY(0);
 }
-
 /*========= MEDIA QUERIES =========*/
 /* extra large devices: 1200 > */
 @media (min-width: 1200px) {
@@ -612,18 +643,14 @@ footer .social a:hover {
   }
 
 /* vehicles */
-#vehicles .cards {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-#vehicles .card {
-  padding-left: 3rem;
-  padding-right: 3rem;
+#vehicles .vehicles {
+  text-align: center;
 }
 
   /* time */
 #title .title h2 {
   font-size: 9rem;
+  text-align: center;
 }
 
   #time .subtitle_div {
