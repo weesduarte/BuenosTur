@@ -162,26 +162,36 @@
               <img src="assets/fotos/buenos-tur-bus.jpg" alt="#">
               <h3 class="title vehicles">Ônibus</h3>
             <p>Ônibus executivo com 42 lugares, propondo conforto com wi-fi a bordo, WC, banco reclinável semi leito, ar condicionado e água</p>
-            <button class="button modalBtn">Ver mais fotos</button>
-
-            <div class="modal">
-              <div class="content">
-                <img src="assets/fotos/buenos-tur-bus.jpg">
-                <img src="assets/fotos/unesc.jpg">
-                <img src="assets/fotos/floripa.jpg">
+            <a class="button" href="#modal1">Ver mais fotos</a>
+            <div class="popup" id="modal1">
+              <a class="popup__overlay" href="#"></a>
+              <div class="popup__wrapper">
+                  <a class="popup__close" href="#vehicles"><strong>X</strong></a>
+                  <img src="assets/fotos/floripa.jpg">
+                  <img src="assets/fotos/unesc.jpg">
+                  <img src="assets/fotos/buenos-tur-bus.jpg">
               </div>
           </div>
           </div>
-          </div>
+          
 
           <div class="card">
             <img src="assets/fotos/buenos-tur-van.jpg" alt="#">
             <h3 class="title vehicles">Van</h3>
             <p>Ônibus com 15 lugares, propondo conforto com wi-fi a bordo e ar condicionado</p>
-            <button class="button">Ver mais fotos</button>
+            <a class="button" href="#modal2">Ver mais fotos</a>
+            <div class="popup" id="modal2">
+              <a class="popup__overlay" href="#"></a>
+              <div class="popup__wrapper">
+                  <a class="popup__close" href="#vehicles"><strong>X</strong></a>
+                  <img src="assets/fotos/buenos-tur-bus.jpg">
+                <img src="assets/fotos/unesc.jpg">
+                <img src="assets/fotos/floripa.jpg">
+              </div>
+          </div>
+            </div>
           </div>
         </div>
-
         </div>
 
       </section>
@@ -190,22 +200,20 @@
 
       <!-- TIME-->
       <section class="section container" id="time">
+        <header>
         <h2 class="title">Horários do transporte universitário</h2>
-        
+      </header>
         <div class="subtitle_div">
           <div style="float: left; width:45%;">
             <ul style="float: right;">
-              <li>Local </li>
+              <li><strong>Local</strong></li>
             </ul>
           </div>
           <div style="float: right; width:45%;">
           <ul>
-            <li>Horários</li>
+            <li><strong>Horários</strong></li>
           </ul>
         </div>
-          <div>
-
-          </div>
         </div>
 
         <div class="horarios">

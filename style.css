@@ -379,42 +379,57 @@ nav.show div.icon-close {
   border-radius: .9rem;
 }
 
-#vehicles img {
-  padding: 1.5rem;
-}
 
 #vehicles .vehicles {
   text-align: center;
 }
-
-.modal {
+/* ========== MODAL VEHICLES ========= */
+[id^=modal] {
   display: none;
   position: fixed;
-  z-index: 1;
-  left: 0;
   top: 0;
+  left: 0;
+}
+[id^=modal]:target {
+  display: block;
+}
+input[type=checkbox] {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+.popup {
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+  z-index: 99999;
 }
-
-.modal .content {
-  margin: 15% auto;
-  padding: 1.25rem;
-  border-radius: 0.31rem;
-  width: 70%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.popup__overlay {
+  position: fixed;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000b3;
 }
-
-#vehicles .content img {
-  padding: .2rem;
-  margin-top: 1.3rem;
+.popup__wrapper {
+  position: fixed;
+  z-index: 9;
+  width: 80%;
+  max-width: 1200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  padding: 58px 32px 32px 32px;
+  background: #fff;
 }
-
+.popup__close {
+  position: absolute;
+  top: 16px;
+  right: 26px;
+  color: black;
+}
 /*============ TIME ============ */
 #time .title {
   font: 700 var(--title-font-size) var(--title-font);
@@ -422,6 +437,10 @@ nav.show div.icon-close {
 
 #time .subtitle_div {
   font-size: 1.4rem;
+}
+
+#time .horarios {
+  margin-bottom: 10rem;
 }
 
 /*====  TESTIMONIALS ============================ */
@@ -607,6 +626,7 @@ footer .social a:hover {
   /* layout */
   main {
     margin-top: var(--header-height);
+  background-color: var(--body-color);
   }
 
   /* home */
@@ -633,21 +653,33 @@ footer .social a:hover {
   }
 
   /* services */
-  .cards {
+  #services .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .card {
+  #services .card {
     padding-left: 3rem;
     padding-right: 3rem;
   }
 
 /* vehicles */
+#vehicles {
+  background-color: var(--body-color);
+}
+
 #vehicles .vehicles {
   text-align: center;
 }
 
-  /* time */
+#vehicles .cards {
+  grid-template-columns: 1fr 1fr;
+}
+
+#vehicles .card {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+  /* 'time' */
 #title .title h2 {
   font-size: 9rem;
   text-align: center;

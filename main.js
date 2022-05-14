@@ -41,19 +41,6 @@ const swiper = new Swiper('.swiper-container', {
   mousewheel: true,
   keyboard: true
 })
-
-const swiperVeic = new Swiper('.swiper', {
-  autoheight: true,
-  speed: 400,
-  spaceBetween: 100,
-  slidesPerView: 1,
-  centeredSlides: true,
-  autoplay: { delay: 1850, disableonInteraction: false },
-  pagination: { el: '.swiper-pagination', clickable: true },
-  navigation: { nextEl: '.swiper-button-sext', prevEl: 'swiper-button-prev' },
-  mousewheel: true,
-});
-
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
 const scrollReveal = ScrollReveal({
   origin: 'top',
@@ -118,8 +105,7 @@ window.addEventListener('scroll', function () {
   activateMenuAtCurrentSection()
 })
 
-/*    modal    */
-
+/*    modal  
 const switchModal = () => {
   const modal = document.querySelector('.modal')
   const actualStyle = modal.style.display
@@ -138,4 +124,40 @@ window.onclick = function(event) {
   if (event.target == modal) {
     switchModal()
   }
+} */
+
+/* / Get the button that opens the modal
+var btn = document.querySelectorAll("button.modal-button");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
 }
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+} */ 
