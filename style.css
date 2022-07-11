@@ -629,6 +629,11 @@ footer .social a:hover {
   background-color: var(--body-color);
   }
 
+  /* logo topside*/
+  .logo {
+    font-size: 2rem;
+  }
+
   /* home */
   #home .container {
     grid-auto-flow: column;
@@ -638,6 +643,10 @@ footer .social a:hover {
 
   #home .image {
     order: 1;
+  }
+
+  #home .title {
+    text-transform: uppercase;
   }
 
   #home .text {
