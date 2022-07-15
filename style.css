@@ -29,7 +29,7 @@ img {
   --base-color-second: hsl(var(--hue) 65% 88%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
-  --text-color: hsl(0 0% 46%);
+  --text-color: black;
   --text-color-light: hsl(0 0% 98%);
   --body-color: rgba(241, 232, 232, 0.568);
 
@@ -49,7 +49,8 @@ html {
 body {
   font: 400 1rem var(--body-font);
   color: var(--text-color);
-  background: var(--body-color);
+  background: rgb(195,83,44);
+background: linear-gradient(270deg, rgba(195,83,44,0.8477766106442577) 16%, rgba(209,188,144,0.8841911764705882) 95%);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -156,7 +157,7 @@ body {
 }
 
 .logo span {
-  color: red;
+  color: #900020;
 }
 
 .logo-alt span {
@@ -305,10 +306,6 @@ nav.show div.icon-close {
 }
 
 /*====  ABOUT ============================ */
-#about {
-  background: var(--body-color)
-}
-
 #about .container {
   margin: 0;
 }
@@ -343,10 +340,6 @@ nav.show div.icon-close {
 }
 
 /*====  SERVICES ============================ */
-#services {
-  background-color: var(--body-color);
-}
-
 .cards.grid {
   gap: 1.5rem;
 }
@@ -435,14 +428,21 @@ input[type=checkbox] {
   font: 700 var(--title-font-size) var(--title-font);
 }
 
-#time .subtitle_div {
-  font-size: 1.4rem;
+#time .lists {
+  list-style: none;
 }
 
-#time .horarios {
-  margin-bottom: 10rem;
+#time .list {
+  padding: 2rem 5rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: 0.25rem solid var(--base-color);
+    border-radius: 0.25rem 0.25rem 0 0;
+    text-align: center;
 }
 
+#time li {
+  font-size: 1.3rem;
+}
 /*====  TESTIMONIALS ============================ */
 #testimonials {
   background: var(--body-color);
@@ -475,10 +475,6 @@ input[type=checkbox] {
   background: var(--base-color);
 }
 /*====  CONTACT ============================ */
-#contact {
-  background-color: var(--body-color);
-}
-
 #contact .grid {
   gap: 4rem;
 }
@@ -672,10 +668,6 @@ footer .social a:hover {
   }
 
 /* vehicles */
-#vehicles {
-  background-color: var(--body-color);
-}
-
 #vehicles .vehicles {
   text-align: center;
 }
@@ -694,13 +686,9 @@ footer .social a:hover {
   text-align: center;
 }
 
-  #time .subtitle_div {
-    font-size: 2.5rem;
-  }
-
-  #time .horarios {
-    font-size: 1.4rem;
-  }
+#time li {
+  font-size: 2rem;
+}
   /* testimonials */
   #testimonials .container {
     margin-left: auto;
